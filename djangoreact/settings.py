@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'debug_toolbar',
 
+    'django_seed', # only for dev mod
+
     'customers',
 ]
 
@@ -138,3 +140,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 """
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
+
+# Django debug toolbar
+# https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
+INTERNAL_IPS=['127.0.0.1']
+# cors origin for the frontend app
+CORS_ORIGIN_ALLOW_ALL = False
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+)
