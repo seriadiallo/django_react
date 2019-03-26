@@ -15,11 +15,11 @@ export default class CustomersService{
         return axios.get(url).then(response => response.data);
     }
     getCustomer(pk) {
-        const url = `${API_URL}/api/customers/${pk}`;
+        const url = `${API_URL}/api/customers/${pk}/`;
         return axios.get(url).then(response => response.data);
     }
     deleteCustomer(customer){
-        const url = `${API_URL}/api/customers/${customer.pk}`;
+        const url = `${API_URL}/api/customers/${customer.pk}/`;
         return axios.delete(url);
     }
     createCustomer(customer){
@@ -27,7 +27,7 @@ export default class CustomersService{
         return axios.post(url,customer);
     }
     updateCustomer(customer){
-        const url = `${API_URL}/api/customers/${customer.pk}`;
+        const url = `${API_URL}/api/customers/${customer.pk}/`;
         return axios.put(url,customer);
     }
 }
