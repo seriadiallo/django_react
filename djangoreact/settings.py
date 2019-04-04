@@ -143,9 +143,9 @@ MEDIA_URL = "/media/"
 
 # Django debug toolbar
 # https://django-debug-toolbar.readthedocs.io/en/latest/installation.html
-INTERNAL_IPS=['127.0.0.1']
+INTERNAL_IPS = ['127.0.0.1']
 # cors origin for the frontend app
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000',
+    decouple.config("CORS_ORIGIN_WHITELIST", cast=decouple.Csv(), default='localhost:3000')
 )
