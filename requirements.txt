@@ -1,4 +1,4 @@
-Django==2.1.7
+Django==2.2.24
 django-cors-headers==2.5.2
 django-debug-toolbar==1.11
 django-seed==0.1.9
